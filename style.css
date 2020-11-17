@@ -1,5 +1,6 @@
 body{
 	background: #fff;
+	font-family: 'Overpass', sans-serif;
 }
 .cart{
 	margin: 100px 0;
@@ -52,4 +53,15 @@ body{
 	font-size: 19px;
 	background-color: #2FBE70;
 	border: none;
+}
+.price{
+	color:gray;
+	font-weight: 500;
+	
+}
+h1{
+	text-align: center;
+	padding:5px;
+	font-weight: 700;
+	color: rgb(255, 208, 0);
 }
