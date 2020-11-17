@@ -1,14 +1,19 @@
-function clickHandleProductChange(increase){
-    const caseInput = document.getElementById("caseCount");
-    const caseCount = parseInt(caseInput.value);
-    let caseNewCount = caseCount;
+function clickHandleProductChange(product,increase){
+    const productInput = document.getElementById(product+"Count");
+    const productCount = parseInt(productInput.value);
+    let productNewCount = productCount;
     if (increase == true){
-        caseNewCount = caseCount + 1;
+        productNewCount = productCount + 1;
     }
-    else if (increase == false && caseCount > 0){
-        caseNewCount = caseCount - 1;
+    else if (increase == false && productCount > 0){
+        productNewCount = productCount - 1;
     }
-    caseInput.value = caseNewCount;
-    caseTotal = caseNewCount * 59;
-    document.getElementById("casePrice").innerText= caseTotal;
+    productInput.value = productNewCount;
+    if (product == "case"){
+        productTotal = productNewCount * 59;
+    }
+    else if (product == "phone"){
+        productTotal = productNewCount * 1219;
+    }
+    document.getElementById(product + "Price").innerText= productTotal;
 }
